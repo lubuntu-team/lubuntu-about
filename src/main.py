@@ -19,18 +19,17 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 """
 
 import sys
-import PyQt5.QtCore
-from PyQt5.QtWidgets import QApplication,QWidget
-from PyQt5.uic import loadUi
+from PyQt5.QtWidgets import QWidget, QApplication, QMainWindow
+from aboutlubuntu_auto import Ui_MainWindow
 
-class LubuntuAbout(QWidget):
+class LubuntuAbout(QMainWindow, Ui_MainWindow):
     def __init__(self):
-        super(LubuntuAbout, self).__init__()
-        loadUi("main.ui", self)
-        self.setWindowTitle("About Lubuntu")
+        super().__init__()
+        self.ui = Ui_MainWindow()
+        self.ui.setupUi(self)
 
 if __name__ == "__main__":
     about = QApplication(sys.argv)
-    aboutwidget = LubuntuAbout()
-    aboutwidget.show()
+    aboutwindow = LubuntuAbout()
+    aboutwindow.show()
     sys.exit(about.exec_())
