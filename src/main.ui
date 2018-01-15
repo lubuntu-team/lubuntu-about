@@ -23,7 +23,11 @@
    </size>
   </property>
   <property name="windowTitle">
-   <string>Form</string>
+   <string>About Lubuntu</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="main.qrc">
+    <normaloff>:/images/Lubuntu.png</normaloff>:/images/Lubuntu.png</iconset>
   </property>
   <widget class="QWidget" name="mainform">
    <layout class="QGridLayout" name="gridLayout">
