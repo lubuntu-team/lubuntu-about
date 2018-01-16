@@ -63,7 +63,7 @@
            </font>
           </property>
           <property name="text">
-           <string>Quad-Core Intel Something or Other CPU</string>
+           <string>graphics</string>
           </property>
          </widget>
         </item>
@@ -112,7 +112,7 @@
            </font>
           </property>
           <property name="text">
-           <string>Quad-Core Intel Something or Other CPU</string>
+           <string>memory</string>
           </property>
          </widget>
         </item>
@@ -161,7 +161,7 @@
            </font>
           </property>
           <property name="text">
-           <string>Quad-Core Intel Something or Other CPU</string>
+           <string>cpu</string>
           </property>
          </widget>
         </item>
@@ -210,7 +210,7 @@
            </font>
           </property>
           <property name="text">
-           <string>Quad-Core Intel Something or Other CPU</string>
+           <string>storage</string>
           </property>
          </widget>
         </item>
