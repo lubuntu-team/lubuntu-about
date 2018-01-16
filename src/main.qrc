@@ -1,9 +1,5 @@
 <RCC>
   <qresource>
-    <file>images/hostname.png</file>
     <file>images/Lubuntu.png</file>
-    <file>images/graphics.png</file>
-    <file>images/cpu.png</file>
-    <file>images/memory.png</file>
   </qresource>
 </RCC>
