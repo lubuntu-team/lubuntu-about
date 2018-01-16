@@ -1,9 +1,9 @@
-<!DOCTYPE RCC><RCC version="1.0">
-<qresource>
+<RCC>
+  <qresource>
+    <file>images/hostname.png</file>
     <file>images/Lubuntu.png</file>
     <file>images/graphics.png</file>
     <file>images/cpu.png</file>
     <file>images/memory.png</file>
-    <file>images/storage.png</file>
-</qresource>
+  </qresource>
 </RCC>
