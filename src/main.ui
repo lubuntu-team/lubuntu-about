@@ -320,6 +320,9 @@
     &lt;p&gt;&lt;a href=&quot;http://phab.lubuntu.me/w/contributor-guide/&quot;&gt;Contribute&lt;/a&gt;&lt;/p&gt;
 &lt;/span&gt;</string>
         </property>
+        <property name="openExternalLinks">
+         <bool>true</bool>
+        </property>
        </widget>
       </item>
      </layout>
