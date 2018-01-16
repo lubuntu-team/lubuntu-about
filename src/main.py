@@ -18,17 +18,76 @@ You should have received a copy of the GNU General Public License
 along with this program.  If not, see <http://www.gnu.org/licenses/>.
 """
 
+import os
 import sys
+import math
+import cpuinfo
+import threading
+from time import sleep
+from socket import gethostname
+from subprocess import run, PIPE
+from psutil import virtual_memory
+from platform import system, uname
+from lsb_release import get_distro_information
 from PyQt5.QtWidgets import QWidget, QApplication, QMainWindow
-from aboutlubuntu_auto import Ui_MainWindow
 
-class LubuntuAbout(QMainWindow, Ui_MainWindow):
+from aboutlubuntu_auto import Ui_Dialog
+
+class LubuntuAbout(QMainWindow, Ui_Dialog):
     def __init__(self):
         super().__init__()
-        self.ui = Ui_MainWindow()
+        self.ui = Ui_Dialog()
         self.ui.setupUi(self)
+        self.ui.versiondetails.setText("Lubuntu %s" % version)
+        self.ui.smalldetails.setText("%s %s, %s" % (os, kernel, arch))
+        self.ui.hostnamedetails.setText(hostname)
+        self.ui.cpudetails.setText("%s" % cpu)
+        self.ui.graphicsdetails.setText("%s" % graphics)
+        self.ui.memorydetails.setText("%s / %s used" % (freemem, totalmem))
+        self.infupdate()
+
+
+def memcalc(mem):
+    # FIXME: I bet there's a native Python interface to grab the highest unit
+    mem = round(mem / math.pow(1024, int(math.floor(math.log(mem, 1024)))), 2)
+    if mem <= 1:
+        return str(round(mem * 1024))+" MB"
+    else:
+        return str(mem)+" GB"
+
+def setvariables():
+    global os
+    global kernel
+    global arch
+    global hostname
+    global version
+    global cpu
+    global graphics
+    global freemem
+    global totalmem
+
+    os = system()
+    kernel = uname()[2]
+    arch = uname()[5]
+    hostname = gethostname()
+
+    if "development branch" in get_distro_information()["DESCRIPTION"]:
+        version = get_distro_information()["DESCRIPTION"]
+        version = version.replace(" (development branch)", "")
+        version = version.replace("Ubuntu ", "").title()
+    else:
+        version = get_distro_information()["RELEASE"].title()
+
+    cpu = cpuinfo.get_cpu_info()["brand"]
+
+    # FIXME: Please, someone simplify this...
+    graphics = (run(["lspci", "-mm"], stdout=PIPE).stdout.decode('utf-8').split("\n")[2].replace("\"", "").split("VGA compatible controller ")[1].split("Controller")[0])+"Controller"
+
+    freemem = memcalc(virtual_memory().free)
+    totalmem = memcalc(virtual_memory().total)
 
 if __name__ == "__main__":
+    setvariables()
     about = QApplication(sys.argv)
     aboutwindow = LubuntuAbout()
     aboutwindow.show()
