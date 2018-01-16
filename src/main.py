@@ -44,7 +44,6 @@ class LubuntuAbout(QMainWindow, Ui_Dialog):
         self.ui.cpudetails.setText("%s" % cpu)
         self.ui.graphicsdetails.setText("%s" % graphics)
         self.ui.memorydetails.setText("%s / %s used" % (freemem, totalmem))
-        self.infupdate()
 
 
 def memcalc(mem):
