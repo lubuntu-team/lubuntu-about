@@ -13,7 +13,7 @@ Vcs-Browser: https://github.com/lubuntu-team/lubuntu-about
 
 Package: lubuntu-about
 Architecture: all
-Depends: python3-lubuntu-about, ${python3:Depends}, ${misc:Depends}
+Depends: python3-lubuntu-about, ${misc:Depends}, ${python3:Depends}
 Description: Program showing information about a Lubuntu system - libraries
  A simple entry in Lubuntu's main menu with a command showing some basic
  hardware and software information, like free memory, processor, OS version,
@@ -23,7 +23,7 @@ Description: Program showing information about a Lubuntu system - libraries
 
 Package: python3-lubuntu-about
 Architecture: all
-Depends: ${python3:Depends}, ${misc:Depends}
+Depends: ${misc:Depends}, ${python3:Depends}
 Description: Program showing information about a Lubuntu system - libraries
  A simple entry in Lubuntu's main menu with a command showing some basic
  hardware and software information, like free memory, processor, OS version,
