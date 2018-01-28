@@ -7,7 +7,7 @@ import os
 from DistUtilsExtra.command import *
 
 setup(name='lubuntu-about',
-      version='1.0',
+      version='1.0.0',
       packages=['src'],
       scripts=['src/lubuntu-about'],
       cmdclass = { "build" : build_extra.build_extra }
