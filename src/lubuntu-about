@@ -31,7 +31,7 @@ from platform import system, uname
 from lsb_release import get_distro_information
 from PyQt5.QtWidgets import QWidget, QApplication, QMainWindow
 
-from aboutlubuntu_autowidgets import Ui_MainWindow
+from aboutlubuntu_autowidgets import Ui_Dialog
 
 class LubuntuAbout(QMainWindow, Ui_Dialog):
     def __init__(self):
