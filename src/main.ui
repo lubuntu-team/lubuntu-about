@@ -129,9 +129,9 @@
          <widget class="QLabel" name="links">
           <property name="text">
            <string>&lt;span style=&quot;text-decoration: underline; color:#0000ff;&quot; align=&quot;right&quot;&gt;
-    &lt;p&gt;&lt;a href=&quot;http://lubuntu.me/&quot;&gt;Website&lt;/a&gt;&lt;/p&gt;
-    &lt;p&gt;&lt;a href=&quot;http://lubuntu.me/links/&quot;&gt;Contact us&lt;/a&gt;&lt;/p&gt;
-    &lt;p&gt;&lt;a href=&quot;http://phab.lubuntu.me/w/contributor-guide/&quot;&gt;Contribute&lt;/a&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;https://lubuntu.me/&quot;&gt;Website&lt;/a&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;https://lubuntu.me/links/&quot;&gt;Contact us&lt;/a&gt;&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;https://phab.lubuntu.me/w/contributor-guide/&quot;&gt;Contribute&lt;/a&gt;&lt;/p&gt;
 &lt;/span&gt;</string>
           </property>
           <property name="openExternalLinks">
