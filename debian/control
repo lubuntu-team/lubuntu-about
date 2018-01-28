@@ -23,7 +23,6 @@ Depends: lsb-release,
          neofetch,
          pyqt5-dev,
          python3-cpuinfo,
-         python3-lubuntu-about,
          python3-psutil,
          ${misc:Depends},
          ${python3:Depends}
