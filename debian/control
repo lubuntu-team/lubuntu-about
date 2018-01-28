@@ -20,6 +20,7 @@ Vcs-Browser: https://github.com/lubuntu-team/lubuntu-about
 Package: lubuntu-about
 Architecture: all
 Depends: lsb-release,
+         neofetch,
          pyqt5-dev,
          python3-cpuinfo,
          python3-lubuntu-about,

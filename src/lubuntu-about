@@ -79,8 +79,14 @@ def setvariables():
 
     cpu = cpuinfo.get_cpu_info()["brand"]
 
-    # FIXME: Please, someone simplify this...
-    graphics = (run(["lspci", "-mm"], stdout=PIPE).stdout.decode('utf-8').split("\n")[2].replace("\"", "").split("VGA compatible controller ")[1].split("Controller")[0])+"Controller"
+    # FIXME: This code is horrible, it shouldn't depend on neofetch and should be reworked.
+    graphicslist = run(["neofetch", "--stdout"], stdout=PIPE).stdout.decode("utf-8").split("\n")
+
+    i = 0
+    while i < len(graphicslist):
+        if "GPU" in graphicslist[i]:
+            graphics = graphicslist[i].replace("GPU: ", "")
+        i += 1
 
     freemem = memcalc(virtual_memory().free)
     totalmem = memcalc(virtual_memory().total)
