@@ -8,5 +8,8 @@ export PYBUILD_NAME=lubuntu-about
 	(cd src && make clean && make)
 	dh $@ --with python3 --buildsystem=pybuild
 
+override_dh_install:
+	dh_missing --fail-missing
+
 override_dh_python3:
 	dh_python3 --no-shebang-rewrite

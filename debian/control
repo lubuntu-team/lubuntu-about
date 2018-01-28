@@ -33,13 +33,3 @@ Description: Program showing information about a Lubuntu system - libraries
  kernel, etc.
  .
  This package installs the main executable.
-
-Package: python3-lubuntu-about
-Architecture: all
-Depends: ${misc:Depends}, ${python3:Depends}
-Description: Program showing information about a Lubuntu system - libraries
- A simple entry in Lubuntu's main menu with a command showing some basic
- hardware and software information, like free memory, processor, OS version,
- kernel, etc.
- .
- This package installs the Python 3 libraries.
