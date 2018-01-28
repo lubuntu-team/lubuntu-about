@@ -6,6 +6,7 @@ Uploaders: Simon Quigley <tsimonq2@ubuntu.com>,
            Julien Lavergne <gilir@ubuntu.com>
 Build-Depends: debhelper (>= 11),
                dh-python,
+               pyqt5-dev-tools,
                python3-all,
                python3-distutils,
                python3-distutils-extra,
